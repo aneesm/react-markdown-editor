@@ -12,6 +12,8 @@
 
     textarea {
       border: none;
+      font-family: $courier;
+      font-size: 22px;
       height: calc(100vh - 64px);
       outline: none;
       resize: none;
