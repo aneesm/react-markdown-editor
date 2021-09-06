@@ -1,0 +1,211 @@
+// TYPOGRAPHY
+
+/* Headline */
+$courier: 'Courier', Helvetica Neue, Helvetica, Arial, sans-serif;
+
+/* Font Weights */
+$font-thinnest: 100;
+$font-thinner: 200;
+$font-thin: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+%h1 {
+  color: $black;
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 36px;
+  font-weight: $font-thin;
+  letter-spacing: 0;
+}
+
+%h2 {
+  color: $black;
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: $font-thin;
+}
+
+%h3 {
+  color: $black;
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: $font-thin;
+}
+
+%h4 {
+  color: $black;
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: $font-normal;
+}
+
+%h5 {
+  color: $black;
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: $font-normal;
+}
+
+%h6 {
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: $font-normal;
+  letter-spacing: normal;
+}
+
+%h1,
+%h2,
+%h3,
+%h4,
+%h5,
+%h6 {
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+
+%a {
+  color: $black;
+  font-family: $courier;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+%body {
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+%button-text {
+  color: $black;
+  font-family: $courier;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin h1($color: $black) {
+  color: $color;
+  
+  @extend %h1;
+}
+
+@mixin h2($color: $black) {
+  color: $color;
+  
+  @extend %h2;
+}
+
+@mixin h3($color: $black) {
+  color: $color;
+  
+  @extend %h3;
+}
+
+@mixin h4($color: $black) {
+  color: $color;
+  
+  @extend %h4;
+}
+
+@mixin h5($color: $black) {
+  color: $color;
+  
+  @extend %h5;
+}
+
+@mixin h6($color: $black) {
+  color: $color;
+  
+  @extend %h6;
+}
+
+@mixin a($color: $black) {
+  color: $color;
+  
+  @extend %a;
+}
+
+@mixin body-copy($color: $black) {
+  color: $color;
+  
+  @extend %body;
+}
+
+@mixin body-white($color: $black) {
+  color: $color;
+  
+  @extend %body;
+}
+
+@mixin button-text($color: $black) {
+  color: $color;
+  
+  @extend %button-text;
+}
+
+@mixin link-text($color: $black) {
+  color: $color;
+  
+  @extend %link-text;
+}
+
+/* Heading 1 */
+h1 {
+  @include h1;
+}
+
+/* Heading 2 */
+h2 {
+  @include h2;
+}
+
+/* Heading 3 */
+h3 {
+  @include h3;
+}
+
+/* Heading 4 */
+h4 {
+  @include h4;
+}
+
+/* Heading 5 */
+h5 {
+  @include h5;
+}
+
+/* Heading 6 */
+h6 {
+  @include h6;
+}
+
+a {
+  @extend %a;
+}
+
+body {
+  @include body-copy;
+}
+
+::selection {
+  background: $orange;
+}
+::-moz-selection {
+  background: $orange;
+}
