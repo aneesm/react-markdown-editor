@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import ReactMarkdown from 'react-markdown';
+import { MarkdownProvider } from 'react-markdown-tree';
+import gfm from 'remark-gfm'
+import markdownConfig from 'react-markdown-tree-config-default';
 
 const MarkdownSanitized = () => {
   const [markDown, setMarkDown] = useState(
@@ -11,7 +14,7 @@ const MarkdownSanitized = () => {
         <textarea className="markdown-input__type" value={markDown} onChange={(e) => setMarkDown(e.target.value)}></textarea>
       </section>
       <section className="markdown-display">
-        <ReactMarkdown>{markDown}</ReactMarkdown>
+        <ReactMarkdown config={markdownConfig} remarkPlugins={[gfm]}>{markDown}</ReactMarkdown>
       </section>
     </>
   )
